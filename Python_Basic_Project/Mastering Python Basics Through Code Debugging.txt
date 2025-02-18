@@ -1,0 +1,45 @@
+1. Data Analysis at DataWars
+
+You're analyzing user engagement data. Review the code and select the correct output.
+
+user_projects = 5
+activity_threshold = 4
+
+print("Checking user status...")
+if user_projects > activity_threshold:
+    print("Active User")
+    print(f"Total projects: {user_projects}")
+What will be the output?
+
+    Active User
+    Total projects: 5
+    
+    Checking user status...
+    
+    Checking user status...
+    Active User
+    Total projects: 5
+    
+    Checking user status...
+
+    Total projects: 5
+
+Answer:
+Checking user status...
+    Active User
+    Total projects: 5
+
+*****************************************************************************************************************************************************
+2. Missing Sale Alert
+def check_sales(daily_sales):
+    if daily_sales > 100:
+        return "Good sales day!"
+    else:
+        return "Missing target"
+
+sales = 150
+check_sales(sales)
+
+*****************************************************************************************************************************************************
+
+

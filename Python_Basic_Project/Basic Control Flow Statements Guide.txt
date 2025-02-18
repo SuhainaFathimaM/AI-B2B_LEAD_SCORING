@@ -1,0 +1,107 @@
+1. Check if a Number is Positive
+def check_positive_number(num):
+    # Fill in the code to check if num is positive
+    if num>0:
+        return "Positive"
+
+****************************************************************************************************************
+2. Determine Age Group
+Analyze the following code snippet and determine the output when the age is 16.
+def check_age(age):
+    if age >= 18:
+        return "Adult"
+    else:
+        return "Minor"
+print(check_age(16))
+
+    None of the Above
+    Error
+    Minor
+    Adult
+
+Answer: 
+Minor
+****************************************************************************************************************
+
+3. Categorize a Number
+def categorize_number(num):
+    if num > 0:
+        return "Positive"  
+    elif num < 0:
+        return "Negative"    
+    else:
+        return "Zero";
+
+****************************************************************************************************************
+4. Assign Grade Category
+def grade_category(grade):
+    # Write the code to return the correct grade category
+    if grade >= 90:
+        grade = 'A'
+    elif grade >= 70:
+        grade = 'B'
+    elif grade >= 50:
+        grade = 'C'
+    else:
+        grade = 'Fail'
+    return grade
+    pass
+
+****************************************************************************************************************
+Looping Statements
+5. Calculate the Sum of Numbers
+def calculate_sum(numbers):
+    total = 0
+    # Fill in the loop to iterate through numbers and calculate the sum
+    for i in numbers:
+        total += i
+    return total
+
+****************************************************************************************************************
+
+6
+Print Numbers Up to a Limit
+
+Analyze the following code snippet and determine its output when the limit is set to 5.
+
+def print_numbers_upto(limit):
+    num = 1
+    while num <= limit:
+        print(num, end=" ")
+        num += 1
+
+print_numbers_upto(5)
+
+    1 2 3 4
+    12345
+    5 4 3 2 1
+    None of the given options
+
+Answer:
+None of the given options 
+****************************************************************************************************************
+
+7. Fix the Sum of Three Numbers
+def sum_of_three_numbers(a, b, c):
+    sum = a + b + c
+    return sum
+
+****************************************************************************************************************
+8. Calculate the Product of a List
+def calculate_product(n):
+    # Write your code here
+    product = 1
+    for i in n:
+        product *= i
+    return product
+    pass
+
+****************************************************************************************************************
+Break and Continue
+9. Find and Stop at a Specific Number
+def find_and_stop(numbers):
+    for num in numbers:
+        if num == 5:
+            return "Found 5"
+
+****************************************************************************************************************

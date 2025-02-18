@@ -1,0 +1,214 @@
+1. Categorize Temperature Levels
+def temperature_category(temp):
+    if temp < 0:
+        return "Freezing"
+    elif temp < 10:
+        return "Cold"
+    elif temp < 20:
+        return "Cool"
+    elif temp < 30:
+        return "Warm"
+    else:
+        return "Hot"
+
+*************************************************************************************************************************************************************************************************************************
+2. Filter Even Numbers
+def filter_even_numbers(numbers):
+    result = []
+    for num in numbers:
+        if num % 2 == 0:
+            result.append(num)
+    return result
+
+*************************************************************************************************************************************************************************************************************************
+3. Find the First Multiple
+def find_first_multiple(numbers, multiple):
+    result = None
+    for num in numbers:
+        if num % multiple == 0:  # Fill in the condition to check if num is a multiple of the input
+            result = num
+            break  # Exit the loop as soon as we find the first multiple
+    return result
+
+*************************************************************************************************************************************************************************************************************************
+
+4. Process Numbers with Even Skipping
+def process_numbers(numbers):
+    total = 0
+    for num in numbers:
+        if num % 2 == 0:  # Fill in the condition to check if the number is even
+            continue  # Skip processing for even numbers
+        total += num
+    return total
+
+*************************************************************************************************************************************************************************************************************************
+
+5. Predict the Output of Conditional Paths
+
+Examine the mystery_output_1 function and predict the output based on the given conditions. Determine which path the code will follow based on the values of x and y.
+
+def mystery_output_1():
+    x = 10
+    y = 5
+    if x > 5:
+        print("Path 1") 
+    elif y<5:
+        print("Path 2")
+    else:
+        print("Path 3")
+
+    Path 2
+    Path 3
+    Path 1
+    Error
+Answer:
+Path 1
+
+*************************************************************************************************************************************************************************************************************************
+6. Predict the Output of Counting Logic
+
+Analyze the code snippet and predict the output of the mystery_output_2 function.
+
+def mystery_output_2(): 
+    count = 0
+    for i in range(5):
+        if i % 2 == 0:
+            count += 1
+        else:
+            count += 2
+    print(count)
+
+    5
+    4
+    7
+    3
+Answer:
+7
+
+*************************************************************************************************************************************************************************************************************************
+
+7. Predict the Output of Loop with Break and Continue
+
+Analyze the mystery_output_3 function and predict the output.
+
+def mystery_output_3():
+    total = 0
+    for i in range(10):
+        if i == 3:
+            continue
+        if i == 7:
+            break
+        total += i
+    print(total)
+
+    45
+    35
+    18
+    48
+
+Answer:
+18
+
+*************************************************************************************************************************************************************************************************************************
+8. Predict the Output of Conditions
+
+Examine the provided code snippet and predict the output
+
+x = 10
+y = 20
+z = 15
+
+if x > y:
+    result = "X is greater"
+elif y > z:
+    result = "Y is greater than Z"
+elif z > x:
+    result = "Z is greater than X"
+else:
+    result = "No condition is True"
+
+print(result)
+
+    Y is greater than Z
+    Z is greater than X
+    None
+    X is greater
+
+Answer: 
+Y is greater than Z
+
+*************************************************************************************************************************************************************************************************************************
+
+9. Fix the Temperature Conversion Formula
+def temperature_conversion(celsius):  
+    fahrenheit = celsius * (9/5) + 32
+    return fahrenheit
+
+*************************************************************************************************************************************************************************************************************************
+10. Fix the Code to Find the First Even Number
+def find_first_even(numbers):
+    for num in numbers:
+        if num % 2 == 0:
+            return num  
+    return None  
+
+*************************************************************************************************************************************************************************************************************************
+
+11. Debug the Grade Calculation Logic
+def grade_calculation(score): 
+    if score >= 90: 
+        return "A"
+    elif score >= 80: 
+        return "B"
+    elif score >= 70:
+        return "C" 
+    elif score >= 60: 
+        return "D"
+    else: 
+        return "F"  
+
+*************************************************************************************************************************************************************************************************************************
+
+12. Fix the Code to Calculate the Sum of Numbers
+def calculate_sum(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+    
+*************************************************************************************************************************************************************************************************************************
+
+13. Write a Function to Find the Largest of Three Numbers
+def find_largest(a, b, c):
+    if a>b and a>c:
+        return a
+    elif b>c:
+        return b
+    else:
+        return c
+
+find_largest(5, 10, 15)
+15
+
+*************************************************************************************************************************************************************************************************************************
+
+14. Write a Function to Find Numbers Divisible by 3 or 5
+def divisible_by_3_or_5(n):
+    l = []
+    for i in range(n+1):
+        if i % 3 == 0 or i % 5 == 0:
+            l.append(i)
+    return l
+
+*************************************************************************************************************************************************************************************************************************
+
+15. Write a Function to Check if a Number is Prime
+def is_prime(number):
+    if number <= 1:
+        return False
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+*************************************************************************************************************************************************************************************************************************

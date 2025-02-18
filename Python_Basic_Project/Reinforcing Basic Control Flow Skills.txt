@@ -1,0 +1,114 @@
+1. Decide Play Actions Based on Weather Conditions
+
+def weather_decision(temperature):
+    
+    if temperature >= 35:
+        return "It's too hot, I won't play."
+    elif temperature >= 15:  # Fill the condition
+        return "It's normal, I will play."
+    else:
+        return "It's cold, I will play with a jacket."
+
+*************************************************************************************************************************************************************************************************************************
+
+2. Determine the Suitable Movie Based on Age
+def movie_night(age):
+    
+    if age >= 7:  # Fill the condition
+        return "You can watch a movie."
+    else:
+        return "You should watch a cartoon movie."
+*************************************************************************************************************************************************************************************************************************
+
+3. Filter Fruits with More Than Five Characters
+def filter_fruits(fruits):
+    result = []
+    for fruit in fruits:
+        # Fill the condition below
+        if len(fruit) > 5:
+            result.append(fruit)
+    return result
+*************************************************************************************************************************************************************************************************************************
+4. Maximize Shopping with a Given Budget
+def shopping_budget(prices, budget):
+    total_spent = 0
+    for price in prices:
+        total_spent += price
+        if total_spent > budget:  # Check after adding the current price
+            return "Out of Budget"
+    return total_spent
+
+*************************************************************************************************************************************************************************************************************************
+
+5
+Ice Cream Decision
+
+5. Predict the output of the following code:
+
+def ice_cream_decision(money) :
+  if money >= 50:
+    return "I will buy an ice cream. "
+  else :
+    return "I will save my money. "
+print(ice_cream_decision(40))
+
+
+    I will save my money.
+    I will buy an ice cream.
+    None
+    Error
+
+Answer:
+I will save my money.
+
+*************************************************************************************************************************************************************************************************************************
+
+6. Exam Grades
+
+Predict the output of the following code:
+def exam_grade(marks):
+  if marks
+    return "Excellent"
+  elif marks
+    return "Good"
+  elif marks
+    return "Average "
+  else:
+    return "Fail"
+
+print(exam_grade(65))
+
+    Excellent
+    Average
+    Fail
+    Good
+Answer:
+Average
+
+*************************************************************************************************************************************************************************************************************************
+7. Water Consumption
+
+Predict the output of the following code:
+Preview
+def drink_water(daily_usage) :
+  total used = 0
+  for usage in daily_usage:
+    if usage > 2:
+      continue
+    total_used += usage
+  return total used
+print(drink_water([1.5, 2.1, 2.5, 1.8]))
+
+    2.5
+    3.3
+    2.1
+    1.8
+Answer:
+3.3
+  
+*************************************************************************************************************************************************************************************************************************
+8. Travel Distance
+
+Predict the output of the following code:
+  
+  

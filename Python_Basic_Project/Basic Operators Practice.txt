@@ -1,0 +1,225 @@
+1. Check Odd or Even
+def is_even(number):
+    # Write the logic here
+    if number % 2 == 0:
+        return True
+    return False
+print(is_even(10)) 
+True
+
+*************************************************************************************************************************************************************************************************************************
+
+2. Check for Free Delivery!
+order_amount = 50  # Don’t change this value!
+
+# Check for free delivery
+def check_free_delivery(order_amount):
+    if order_amount > 50:
+        return 'Yay, free delivery!'
+    return 'Oops, no free delivery!'
+
+*************************************************************************************************************************************************************************************************************************
+
+3. Check Eligibility for Discounts
+spending = 3500
+has_membership = True
+
+# Complete the logic to check discount eligibility using logical operators
+eligible_for_discount = has_membership or spending > 5000
+print(eligible_for_discount)
+True
+
+*************************************************************************************************************************************************************************************************************************
+
+4. Detect a Quadratic Equation
+def is_quadratic(a, b, c):
+    # Use logical and comparison operators to check
+    if a != 0:
+        return True
+    return False
+
+print(is_quadratic(1, 2, 3))  
+print(is_quadratic(0, 2, 3))  
+True
+False
+
+*************************************************************************************************************************************************************************************************************************
+
+5. Check Voting Eligibility
+age = 17
+citizen = True
+
+# Use logical and comparison operators to determine eligibility
+can_vote = citizen and age >= 18
+print(can_vote)
+False
+
+*************************************************************************************************************************************************************************************************************************
+
+6. Calculate Grade Based on Marks
+marks = 88
+
+# Use comparison and assignment operators to assign grades
+if marks>=90:
+    grade = 'A'
+elif marks >= 75:
+    grade = 'B'
+elif marks >= 50:
+    grade = 'C'
+else:
+    grade = 'F'
+
+print(grade)
+B
+
+*************************************************************************************************************************************************************************************************************************
+
+7. Calculate Compound Interest
+def compound_interest(principal, rate, time):
+    # Complete the calculation using arithmetic and assignment operators
+    ci = principal*((1+(rate/100))**time)-principal
+    return ci
+
+print(compound_interest(10000, 5, 2)) 
+1025.0
+
+*************************************************************************************************************************************************************************************************************************
+
+8. Eras Tour Ticket Revenue Analysis!
+# Ticket sales data
+general_tickets = 25000
+general_price = 100
+
+vip_tickets = 5000
+vip_price = 250
+
+ultra_vip_tickets = 1000
+ultra_vip_price = 500
+
+service_charge_rate = 5 / 100  # 5%  
+# Step 1: Calculate total revenue
+total_revenue = 
+# Step 2: Apply service charge
+final_revenue = ...
+# Step 3: Check if milestone is reached
+milestone_reached = ...
+# Ticket sales data
+general_tickets = 25000
+general_price = 100
+
+vip_tickets = 5000
+vip_price = 250
+
+ultra_vip_tickets = 1000
+ultra_vip_price = 500
+
+service_charge_rate = 5 / 100  # 5%
+
+# Step 1: Calculate total revenue
+total_revenue = (general_tickets * general_price) + (vip_tickets * vip_price) + (ultra_vip_tickets * ultra_vip_price)
+
+# Step 2: Apply service charge
+final_revenue = total_revenue * (1 - service_charge_rate)
+
+# Step 3: Check if milestone is reached
+milestone_reached = final_revenue > 10000000
+
+print(total_revenue)   
+print(final_revenue)    
+print(milestone_reached) 
+4250000
+4037500.0
+False
+print(total_revenue)    
+print(final_revenue)    
+print(milestone_reached)
+
+*************************************************************************************************************************************************************************************************************************
+
+9. Discount Calculator for a Shopping Spree
+# Prices of items
+item1 = 2000
+item2 = 1800
+item3 = 1500
+
+# Calculate the total cost
+total_cost = item1 + item2 + item3
+
+# Use operators and control flow statements to calculate the total `discount` amount
+if total_cost > 5000:
+    discount = 0.20*total_cost
+elif total_cost >= 3000:
+    discount = 0.10*total_cost
+else:
+    discount = 0
+
+# Calculate final price
+final_price = total_cost - discount
+
+print(f"Total Cost: ₹{total_cost}")
+print(f"Discount: ₹{discount}")
+print(f"Final Price: ₹{final_price}")
+Total Cost: ₹5300
+Discount: ₹1060.0
+Final Price: ₹4240.0
+
+*************************************************************************************************************************************************************************************************************************
+
+10. Split the Bill with Friends
+def Split_Bill(bill, friends):
+    # Step 1: Check if the total bill is divisible by the number of friends
+    if bill % friends == 0:
+        per_person = bill / friends
+        return f"Total bill is ₹{bill} and each person pays ₹{per_person}"
+
+    # Step 2: If not divisible, round up to the next multiple of 100
+    bill = ((bill // 100) + 1) * 100  
+
+    # Step 3: Calculate per person amount after rounding
+    per_person = bill / friends
+
+    # Step 4: If there is any remainder, round up to the next whole number
+    if per_person != int(per_person):
+        per_person = int(per_person) + 1
+
+    return f"Total bill is ₹{bill} and each person pays ₹{per_person}"
+
+*************************************************************************************************************************************************************************************************************************
+11. Weekend Road Trip Decision
+def road_trip(weather, you_have_car, friend_has_car, your_budget, friend_budget):
+# Use logical operators to check all conditions
+    if weather != "rainy" and (you_have_car or friend_has_car) and ((your_budget + friend_budget)>= 5000) and your_budget > 0 and friend_budget > 0 :
+        decision = "Pack your bags! You're going on the road trip!"
+    else:
+        decision = "Stay home and plan for another time."
+
+    return decision
+
+*************************************************************************************************************************************************************************************************************************
+
+12. Secret Code Lock
+def find_secret_codes():
+    print("The unique secret code combinations are:")
+    
+    # Loop through all possible values for the three digits (1 to 9)
+    total_combinations = 0
+    for digit1 in range(1, 10):
+        for digit2 in range(digit1 + 1, 10):  # Start from a suitable range to avoid repetition
+            for digit3 in range(digit2 + 1, 10):  
+                # Check if the sum of the digits is 15
+                if digit1 + digit2 + digit3 == 15 :
+                    total_combinations += 1  #increment the count by 1
+                    print(f"Combination {total_combinations} : {digit1}, {digit2}, {digit3}")
+    return total_combinations
+
+find_secret_codes()
+The unique secret code combinations are:
+Combination 1 : 1, 5, 9
+Combination 2 : 1, 6, 8
+Combination 3 : 2, 4, 9
+Combination 4 : 2, 5, 8
+Combination 5 : 2, 6, 7
+Combination 6 : 3, 4, 8
+Combination 7 : 3, 5, 7
+Combination 8 : 4, 5, 6
+8

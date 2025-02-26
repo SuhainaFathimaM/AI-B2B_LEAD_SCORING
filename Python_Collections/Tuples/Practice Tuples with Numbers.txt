@@ -16,6 +16,8 @@ Enter your answer in the input box below as an integer.
 
 999
 Correct!
+
+-----------------------------------------------------------------------------------------------------------------------------------------
 2
 Access the 12th element of the tuple fibo_seq
 
@@ -23,6 +25,7 @@ Find the 12th element of the tuple fibo_seq and enter your answer in the input b
 
 144
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 3
 Check if 21 and 34 are Adjacent Fibonacci Numbers
 
@@ -44,6 +47,7 @@ if index_21 + 1 == index_34 or index_21 - 1 == index_34:
     print("Yes")
 else:
     print("No")
+-----------------------------------------------------------------------------------------------------------------------------------------
 4
 Find the Golden Ratio using elements at index 997 and 998
 
@@ -53,12 +57,14 @@ Find the golden ratio using the elements at index 997 and 998 in the tuple fibo_
 
 Correct!
 golden_ratio = int(fibo_seq[998]) / int(fibo_seq[997])
+-----------------------------------------------------------------------------------------------------------------------------------------
 5
 Slice the tuple fibo_seq from 4th index to 34th index
 
 Slice the tuple fibo_seq from the 4th index to the 34th index and store it in the variable thirty_step.
 
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 6
 Find the maximum fibonacci number in the fibo_seq
 
@@ -86,6 +92,7 @@ Since tuple is a Fibonacci series. Therefore, the maximum number of the series w
 
 max_num = int(fibo_seq[-1])
 max_num
+-----------------------------------------------------------------------------------------------------------------------------------------
 7
 Find the minimum fibonacci number in the fibo_seq
 
@@ -99,6 +106,7 @@ Let's work with the pixel coordinates of an 8x8 grayscale image
 
 The tuple pixel_coordinates contains the coordinate of the image as a tuple. It means pixel_coordinates is a tuple of tuples. Each tuple in pixel_coordinates represents a pixel in the image. The first element of the tuple is the row number and the second element is the column number. For example, the first pixel is at the top left corner of the image and its coordinates are (0,0). The second pixel is at the top right corner of the image and its coordinates are (0,7). The third pixel is at the bottom left corner of the image and its coordinates are (7,0). The last pixel is at the bottom right corner of the image and its coordinates are (7,7).
 
+-----------------------------------------------------------------------------------------------------------------------------------------
 8
 How many pixels are there in the image represented by the pixel_coordinates tuple?
 
@@ -115,6 +123,7 @@ How many pixels are there in the image represented by the pixel_coordinates tupl
 400
 
 Correct!
+v-----------------------------------------------------------------------------------------------------------------------------------------
 9
 Find the coordinate at index 3
 
@@ -133,6 +142,7 @@ y-coordinate: 4
 x-coordinate: 0
 
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 10
 Which is the darkest pixel
 
@@ -153,7 +163,7 @@ Darkest pixel: (0, 0)
 Correct!
 Working with Students Records
 In this section, we will work with student's records. We will use tuples to store the records of students in a course. Each tuple will have two elements, the first element will be the name of the student and the second element will be the overall grade of the student in the course.
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 11
 Concatenate the records of both collections into one tuple
 
@@ -164,6 +174,7 @@ Using the + operator we can concatenate two tuples.
 
 combined = student_data_a + student_data_b
 combined
+-----------------------------------------------------------------------------------------------------------------------------------------
 12
 Sort the combined tuple so that we will have names in alphabetic order
 
@@ -175,7 +186,7 @@ sorted_combine
 When we pass a tuple of tuples to the sorted() method, it will sort the tuples based on the first element of each tuple. In our case, the first element of each tuple is the name of the student. So the sorted() method will sort the tuples based on the name of the student.
 
 You noticed that the sorted() method returns a list, so we need to convert it back to the tuple.
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 13
 Count the Students in the combined tuple who have grades above 90
 
@@ -189,6 +200,7 @@ for student in combined:
 
 above_90
 Knowledge Test
+-----------------------------------------------------------------------------------------------------------------------------------------
 14
 What is a tuple in Python
 
@@ -205,6 +217,7 @@ An immutable sequence of elements.
 A mutable sequence of elements.
 
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 15
 Which of the following is the correct syntax to create a tuple in Python?
 
@@ -221,6 +234,7 @@ my_tuple = (1,2,3)
 my_tuple = {1,2,3}
 
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 16
 Which operator is used to concatenate two tuples in Python?
 
@@ -237,6 +251,7 @@ Which operator is used to concatenate two tuples in Python?
 +
 
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 17
 Which method is used to count the occurrences of a specific element in a tuple?
 
@@ -253,6 +268,7 @@ index()
 count()
 
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 18
 How do you check if an element exists in a tuple?
 
@@ -269,6 +285,7 @@ Using the contains() method
 Using the in operator
 
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 19
 Which method can be used to find the index of a specific element in a tuple?
 
@@ -285,6 +302,7 @@ get_index()
 find()
 
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 20
 What is the output of the following code snippet?
 
@@ -303,6 +321,7 @@ len(my_tuple)
 4
 
 Correct!
+-----------------------------------------------------------------------------------------------------------------------------------------
 21
 What is the output of the following code snippet?
 

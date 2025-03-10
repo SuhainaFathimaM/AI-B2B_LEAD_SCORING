@@ -1,0 +1,228 @@
+Conclusion
+
+Preview
+Proto by link
+
+Descriptive Statistics is a branch of statistics that involves the collection, analysis, and interpretation of data to describe and summarize the characteristics of a dataset.
+
+Descriptive statistics can be used to describe both quantitative data (e.g., numerical data) and qualitative data (e.g., categorical data). Some of the commonly used descriptive statistics measures include measures of central tendency (mean, median, mode), measures of dispersion (range, standard deviation, variance), and measures of association (correlation coefficient, covariance).
+
+In this project, we will introduce measures of central tendency.
+
+Definitions
+sample Photo by link
+
+We need to introduce relevant concepts.
+
+What is a Population?
+In statistics, the term population (or universe) has a different and very specific meaning related to the fundamental task of statistics: the analysis of measurement data
+
+This definition must include an exact description of the items being measured: age, time, temperature, place, or whatever feature characterizes the items.
+
+What is a Parameter?
+A parameter is a value that describes a characteristic of an entire population, such as the population means.
+
+The population means and standard deviation are two common parameters.
+
+In statistics, Greek symbols usually represent population parameters, such as 
+μ
+ (mu) for the mean and 
+σ
+ (sigma) for the standard deviation.
+
+What is a Sample?
+A sample is a representative group drawn from the population.
+
+What is a statistic?
+A statistic is anything that can be computed from the collected data.
+
+A statistic is any summary number, like an average or percentage, that describes the sample.
+
+Measures of Central Tendency
+There are three common ways of describing the center of a set of numbers:
+
+The mean: add up all the numbers and divide by how many numbers there are.
+The median: is the middle number. It is found by putting the numbers in order and taking the actual middle number if there is one, or the average of the two middle numbers if not.
+The mode: is the most commonly occurring number. The mode is the most commonly occurring data point in a dataset. The mode is useful when there are a lot of repeated values in a dataset. There can be no mode, one mode, or multiple modes in a dataset. We can determine the modal class (the class with the highest frequency) and then use its class mark as the approximate mode.
+Let’s show these by calculating the mean, median, and mode. Suppose we weight of luggage presented by airline passengers at the check-in (measured to the nearest kg):
+
+# Define a list of numbers
+data = [10, 12, 15, 17, 20, 20, 22, 25, 30, 35]
+
+# Calculate the mean
+mean = sum(data) / len(data)
+print("Mean:", mean)
+
+# Calculate the median
+sorted_data = sorted(data)
+n = len(sorted_data)
+if n % 2 == 0:
+    median = (sorted_data[n // 2 - 1] + sorted_data[n // 2]) / 2
+else:
+    median = sorted_data[n // 2]
+print("Median:", median)
+
+# Calculate the mode
+c = Counter(data)
+mode = c.most_common(1)[0][0]
+print("Mode:", mode)
+We could use numpy and scipy to compute these measures.
+
+import numpy as np
+from scipy import stats
+
+mean_=np.mean(data)
+median_=np.median(data)
+mode_=stats.mode(data)
+
+print('mean',mean_,'median',median_,'mode',mode_)
+Population ans Sample Mean
+We will assume that the population is of size N and that associated with each member of the population is a numerical value of interest.
+
+These numerical values will be denoted by 
+x
+1
+,...,
+x
+N
+.
+
+The variable 
+x
+i
+ may be a numerical variable such as age or weight, or it may take on the value 1 or 0 to denote the presence or absence of some characteristic.
+
+We will be particularly interested in the population mean:
+
+
+Preview
+However, we are mainly concerned with analyzing data from a sample taken from a population, to make inferences about that population. Our data sets are usually random samples drawn from the population.
+
+When we have a random sample of size 
+n
+, we use the sample information to estimate the population means and population variance in the following way.
+
+
+Preview
+Empirical Relationship between Mean, Median and Mode
+Empirical Relationship between Mean, Median, and Mode
+There is an empirical relationship between the mean, median, and mode of a dataset, which can provide some insight into the shape of the distribution.
+
+For a symmetric distribution, the mean, median, and mode are equal. This means that the dataset has a single peak and is evenly distributed around the center.
+
+Preview
+For a positively skewed distribution, the mean is greater than the median, which is greater than the mode. This means that the dataset has a long tail on the right side, with some high values that pull the mean towards the right.
+
+Preview
+For a negatively skewed distribution, the mean is less than the median, which is less than the mode. This means that the dataset has a long tail on the left side, with some low values that pull the mean towards the left.
+
+Preview
+Choosing the "best" measure of center
+The mean is ordinarily the preferred measure of central tendency. The mean is the arithmetic average of a distribution.
+
+There are some situations in which the mean is not the "best" measure of central tendency. In certain situations, the median is the preferred measure. These situations are as follows:
+
+when you know that distribution is skewed
+when you believe that distribution might be skewed
+when you have a small number of subjects
+The purpose of reporting the median in these situations is to combat the effect of outliers. Outliers affect the distribution because they are extreme scores.
+
+Practice
+It's time to practice previous concepts. Good luck!!
+
+1
+Ten patients at a doctor’s surgery wait for the following lengths of times to see their doctor. What are the mean, median, and mode for these data?
+
+Dataset= [5 mins, 20 mins, 28 mins, 2 mins, 5 mins,9 mins, 62 mins, 11mins, 16 mins, 5 mins]
+
+
+median 10.0
+
+
+mean 16.3
+
+
+mode 6
+
+
+mean 10.0
+
+
+mode 20
+
+
+mode 5
+
+Correct
+The correct answer is:
+
+mean : 16.3, median: 10.0, and mode: 5
+
+The median would be the preferred measure of central tendency to use here and not the mean since there is an outlier of 62 mins
+
+2
+Computing the Mean for the Datasaurus Dozen Dataset
+
+The "Datasaurus Dozen" dataset contains 13 datasets, each with a different shape but the same summary statistics. Import the datasaurus.csv using pandas as df.
+
+Once you have imported the dataset, you can compute the mean for each dataset.
+
+
+Preview
+Select the correct statements.
+
+
+The mean is almost similar for all the dataset
+
+
+The highest mean is for the Dino dataset
+
+
+The mean value is similar for star and dots set
+
+
+All the answer are incorrect
+
+Correct
+The Datasaurus dozen is a collection of 13 different data sets with very similar numerical statistics but very different scatter plots. Despite these similarities in numerical summaries, each dataset in the Datasaurus dozen possesses vastly different scatter plot shapes and structures. This collection serves as a powerful demonstration of the importance of data visualization in understanding and interpreting data.
+
+df.groupby('dataset').mean()
+or
+
+# Loop through each dataset
+for dataset in df['dataset'].unique():
+    # Subset the dataset
+    subset = df[df['dataset'] == dataset]
+
+    # Compute the mean
+    mean_x = subset['x'].mean()
+    mean_y = subset['y'].mean()
+
+    # Print the results
+    print("Dataset:", dataset)
+    print("Mean x:", mean_x)
+    print("Mean y:", mean_y)
+    print("")
+If we truncate the results to the second decimal place, they are the same.
+
+
+Preview
+In summary, the Datasaurus dozen exemplifies the importance of combining numerical statistics with data visualization to uncover meaningful insights and make informed decisions in data analysis.
+
+3
+NYCflights13 data
+
+For this task, we will explore a real-world dataset. Load the dataset flights.csv and store it in the variable flights, which contains over 300,000 observations of flights departing NYC in 2013.
+
+We will focus on displaying a single variable, the arrival delay of flights in minutes
+
+The flight arrival delays are in minutes and negative values mean the flight was early.
+
+What are the mean, median, and mode for these data? Store them in f_mean, f_median, and f_mode.
+
+Correct
+Conclusion
+During this lab, we introduce Descriptive statistics and Measures of Central Tendency. Central tendency measures are a group of descriptive statistics that aim to describe the typical or central value of a dataset. The three most commonly used central tendency measures are the mean, median, and mode.
+
+In the next lab, we will introduce the others tendency measures.
+

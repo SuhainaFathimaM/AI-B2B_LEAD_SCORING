@@ -1,0 +1,109 @@
+When an experiment is performed, we are interested mainly in some function of the outcome as opposed to the actual outcome itself.
+
+A random variable is a function that assigns a real number to each outcome in the sample space of a random experiment.
+
+Definitions:
+
+A discrete random variable is a random variable with a finite (or countably infinite) ranges
+
+Number of scratches on a surface, number of students present, number of red marbles in a jar.
+
+A continuous random variable is a random variable with an interval of real numbers for its range.
+
+temperature, time, voltage, weight, height of students in class, distance traveled between towns.
+
+1
+Decide whether a continuous (C) random variable is the best for each of the following variables:
+
+
+Number of heads when flipping three coins.
+
+
+The volume of gasoline that is lost to evaporation during the filling of a gas tank.
+
+
+The temperature of a cup of coffee served at a restaurant.
+
+
+The time until a projectile returns to Earth.
+
+Correct
+The time until a projectile returns to Earth: C (Continuous)
+Time is measured on a continuous scale, as it can take any value (e.g., 5.3 seconds or 12.8 seconds). It is not limited to discrete units.
+
+The volume of gasoline that is lost to evaporation during the filling of a gas tank: C (Continuous)
+Volume is a continuous variable because it can take any fractional value within a range (e.g., 0.05 liters or 0.031 liters).
+
+Number of heads when flipping three coins: Not C (Discrete)
+This is a discrete random variable since the number of heads can only be whole numbers (0, 1, 2, or 3), not fractional.
+
+The temperature of a cup of coffee served at a restaurant: C (Continuous)
+Temperature is measured on a continuous scale, as it can take any real value within a range (e.g., 75.3°C or 76.1°C).
+
+2
+Identify the type of random variable and the set of possible values for each random variable. (Make a reasonable estimate based on experience, where necessary.)
+
+The number of heads in two tosses of a coin.
+
+
+Discrete random variables
+
+
+Continuous random variables
+
+Correct
+3
+Identify the type of random variable and the set of possible values for each random variable. (Make a reasonable estimate based on experience, where necessary.)
+
+The amount of liquid in a 12 -ounce can of soft drink.
+
+
+Continuous random variables
+
+
+Discrete random variables
+
+Correct
+In some cases, the random variable X is actually discrete but, because the range of possible values is so large, it might be more convenient to analyze X as a continuous random variable.
+
+Example 1: Define X to be 1 if a bead is blue and red otherwise.
+
+import numpy as np
+
+x = np.array(["red", "blue"])
+beads=np.repeat(x, [2, 3], axis=0)
+
+def beads_x():
+    sample=np.random.choice(beads)
+    if sample=="blue":
+        x=1
+    else:
+        x=0
+    return x
+Here X is a random variable: every time we select a new bead the outcome changes randomly.
+
+beads_x()
+4
+Consider a game where a fair six-sided die is rolled.
+
+Complete the function and run it in the notebook. The function should return a random integer between 1 and 6 (both inclusive).
+
+import numpy as np
+
+def roll_die():
+    pass  # Generates a random integer between 1 and 6 (inclusive)
+Correct
+def roll_die():
+    return np.random.randint(1, 7)  # Generates a random integer between 1 and 6 (inclusive)
+5
+Consider a scenario where a coin is flipped.
+
+Complete the function and execute it in the notebook. The function should return 0 or 1.
+
+import numpy as np
+
+def flip_coin():
+    pass  # Returns 1 if the outcome is heads, 0 otherwise
+Correct
+def flip_coin():
+    return np.random.randint(0, 2)  # Generates a rando
